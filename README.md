@@ -7,6 +7,8 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**GNU Parallel**](https://www.gnu.org/software/parallel/): a shell tool for executing jobs in parallel using one or more computers. Its PDF document settles in **Linux** folder.
 
+[**GNU Screen**](https://www.gnu.org/software/screen/): a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells.
+
 ## R
 [**R for data science**](https://r4ds.hadley.nz/): If you use R to do data analysis, it is the first book you have to read.
 
