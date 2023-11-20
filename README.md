@@ -1,9 +1,11 @@
 # Useful tutorial for daily bioinformatics work
 
-This repository lists extremely handful online tutorial needed for daily bioinformatics work. The content separates in three major sections including **Linux**, **R**, **Python** and **Theory**.
+This repository lists extremely handful online tutorial needed for daily bioinformatics work. The content separates in four major sections including **Linux**, **R**, **Python** and **Theory**.
 
 ## Linux
-[**Bioinformatics Data Skills**](https://github.com/vsbuffalo/bds-files): Really useful introduction to basic bioinformatics skill for beginners. Its PDF document settle in **Linux** folder.
+[**Bioinformatics Data Skills**](https://github.com/vsbuffalo/bds-files): Really useful introduction to basic bioinformatics skill for beginners. Its PDF document settles in **Linux** folder.
+
+[**GNU Parallel**](https://www.gnu.org/software/parallel/): a shell tool for executing jobs in parallel using one or more computers. Its PDF document settles in **Linux** folder.
 
 ## R
 [**R for data science**](https://r4ds.hadley.nz/): If you use R to do data analysis, it is the first book you have to read.
