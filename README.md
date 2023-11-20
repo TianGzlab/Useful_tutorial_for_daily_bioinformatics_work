@@ -8,7 +8,7 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 ## R
 [**R for data science**](https://r4ds.hadley.nz/): If you use R to do data analysis, it is the first book you have to read.
 
-[**ggplot2: Elegant Graphics for Data Analysis**](https://ggplot2-book.org/): introduction to underlying graphic grammer behind **ggplot2**。
+[**ggplot2: Elegant Graphics for Data Analysis**](https://ggplot2-book.org/): introduction to underlying graphic grammer behind **ggplot2**.
 
 ## Python
 [**Basic use of Python**](https://github.com/jackfrued/Python-Core-50-Courses): may be the best Chinese Python tutorial for beginners.
