@@ -1,6 +1,6 @@
 # Useful tutorial for daily bioinformatics work
 
-This repository lists extremely handful online tutorial needed for daily bioinformatics work. The content separates in four major sections including **Linux**, **R**, **Python** and **Theory**.
+This repository lists extremely handful online tutorial needed for daily bioinformatics work. The content separates in five major sections including **Linux**, **R**, **Python** , **Framework** and **Theory**.
 
 ## Linux
 [**Bioinformatics Data Skills**](https://github.com/vsbuffalo/bds-files): Really useful introduction to basic bioinformatics skill for beginners. Its PDF document settles in **Linux** folder.
@@ -17,5 +17,13 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 ## Python
 [**Basic use of Python**](https://github.com/jackfrued/Python-Core-50-Courses): may be the best Chinese Python tutorial for beginners.
 
+## Framework
+[**WDL**](https://github.com/openwdl/wdl): The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and writeable syntax. Its user guide can be found [here](https://support.terra.bio/hc/en-us/articles/360037117492-Overview-Getting-started-with-WDL). WDL relies on excuting engine called `cromwell`, whose java ball can be downloaded [here](https://github.com/broadinstitute/cromwell/releases/tag/86) 
+
 ## Theory
 [**Harvard Stat 115**](https://www.bilibili.com/video/BV1yS4y1Z721/): gives the beginners an overview of the proceedings in bioinformatics and computational biology and explains classic algorithm well.
+
+## Other resource
+[**Great suggestion for data visualization**](https://github.com/cxli233/FriendsDontLetFriends/tree/main#13-friends-dont-let-friends-forget-to-reorder-stacked-bar-plot ): tips not to make bad choice when visualization. 
+
+
