@@ -17,6 +17,8 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 ## Python
 [**Basic use of Python**](https://github.com/jackfrued/Python-Core-50-Courses): may be the best Chinese Python tutorial for beginners.
 
+[**Machine learning based on sklearn**](https://www.bilibili.com/video/BV1P7411P78r/?vd_source=cd3f09bebcacfecf396259a271817a0c)：how to use Python sklearn package to make machine learning happen. Its PDF documents settle in **Machine_learning** folder.
+
 ## Framework
 [**WDL**](https://github.com/openwdl/wdl): The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and writeable syntax. Its user guide can be found [here](https://support.terra.bio/hc/en-us/articles/360037117492-Overview-Getting-started-with-WDL). WDL relies on excuting engine called `cromwell`, whose java ball can be downloaded [here](https://github.com/broadinstitute/cromwell/releases/tag/86) 
 
@@ -28,5 +30,3 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 [**Great suggestion for data visualization**](https://github.com/cxli233/FriendsDontLetFriends/tree/main#13-friends-dont-let-friends-forget-to-reorder-stacked-bar-plot ): tips not to make bad choice when visualization. 
 
 [**Single cell tutorial**](https://github.com/hbctraining/scRNA-seq_online/blob/master/schedule/links-to-lessons.md): Great single-cell RNA-seq data analysis workshop.
-
-[**Machine learning based on sklearn**](https://www.bilibili.com/video/BV1P7411P78r/?vd_source=cd3f09bebcacfecf396259a271817a0c)：how to use Python sklearn package to make machine learning happen. Its PDF documents settle in **Machine_learning** folder.
