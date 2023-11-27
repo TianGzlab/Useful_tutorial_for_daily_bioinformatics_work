@@ -23,7 +23,10 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 ## Theory
 [**Harvard Stat 115**](https://www.bilibili.com/video/BV1yS4y1Z721/): gives the beginners an overview of the proceedings in bioinformatics and computational biology and explains classic algorithm well.
 
+
 ## Other resource
 [**Great suggestion for data visualization**](https://github.com/cxli233/FriendsDontLetFriends/tree/main#13-friends-dont-let-friends-forget-to-reorder-stacked-bar-plot ): tips not to make bad choice when visualization. 
 
+[**Single cell tutorial**](https://github.com/hbctraining/scRNA-seq_online/blob/master/schedule/links-to-lessons.md): Great single-cell RNA-seq data analysis workshop.
 
+[**Machine learning based on sklearn**](https://www.bilibili.com/video/BV1P7411P78r/?vd_source=cd3f09bebcacfecf396259a271817a0c)：how to use Python sklearn package to make machine learning happen. Its PDF documents settle in **Machine_learning** folder.
