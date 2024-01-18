@@ -30,3 +30,6 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 [**Great suggestion for data visualization**](https://github.com/cxli233/FriendsDontLetFriends/tree/main#13-friends-dont-let-friends-forget-to-reorder-stacked-bar-plot ): tips not to make bad choice when visualization. 
 
 [**Single cell tutorial**](https://github.com/hbctraining/scRNA-seq_online/blob/master/schedule/links-to-lessons.md): Great single-cell RNA-seq data analysis workshop.
+
+
+[**Bulk RNAseq tutorial**](https://uofabioinformaticshub.github.io/Spring_Into_Bioinformatics/): Great Bulk RNA-seq data analysis workshop.
