@@ -1,0 +1,180 @@
+library(tidyverse)
+library(rvest)
+library(httr)
+
+options(timeout = 1200)
+
+download_webpathology_1 = function(section) {
+  base_url = "https://www.webpathology.com/"
+  html = read_html(base_url)
+  
+  section_urls = html %>% 
+    html_elements("#category-group") %>% 
+    html_elements("a") %>% 
+    html_attr("href")
+  
+  section_urls = section_urls[!is.na(section_urls)]
+  section_urls = paste0("https://www.webpathology.com", section_urls)
+  
+  target_url = switch(section,
+         Neuropath = section_urls[1],
+         Breast = section_urls[2],
+         Head_Neck = section_urls[3],
+         Mediastinum = section_urls[4],
+         Peritoneum = section_urls[5],
+         Genitourinary = section_urls[6],
+         Cancer_Genomics = section_urls[7],
+         HemPath = section_urls[8],
+         Gynecologic = section_urls[9],
+         Orthopedic = section_urls[10],
+         DermPath = section_urls[11],
+         Endocrine = section_urls[12],
+         GI_Path = section_urls[13],
+         Soft_Tissue = section_urls[14],
+         Pulmonary = section_urls[15],
+         Cardiac = section_urls[16],
+         Infectious_Disease = section_urls[17],
+         Pediatric = section_urls[18],
+         CytoPath = section_urls[19],
+         Genetic_Disorders = section_urls[20]
+         )
+  
+
+ section_html = read_html(target_url)
+ 
+ section_sub_urls = section_html %>%
+   html_elements(".list-titles") %>% 
+   html_elements("a") %>%
+   html_attr("href")
+ 
+ section_sub_names = section_html %>%
+   html_elements(".list-titles") %>% 
+   html_elements("a") %>%
+   html_text()
+ 
+ return(list(urls = section_sub_urls, names = section_sub_names))
+}
+
+download_webpathology_2 = function(urls,names) {
+  base_url = "https://www.webpathology.com/"
+  
+  map2(urls,
+       names,
+       function(url1, name) {
+        sub_html = read_html(paste0(base_url, url1))
+
+        slide_urls = sub_html %>% 
+         html_elements(".list-group") %>%
+         html_elements(".list-links") %>% 
+         html_elements("div") %>%
+         html_elements("a") %>% 
+         html_attr("href")
+         
+       
+       slide_counts = sub_html %>% 
+         html_elements(".slides-count") %>%
+         html_elements("b") %>% 
+         html_text2() %>%
+         str_extract("\\d+") %>% 
+         as.numeric()
+       
+       slide_urls = slide_urls[slide_counts != 0]
+       
+       slide_names = sub_html %>% 
+         html_elements(".list-group") %>%
+         html_elements(".list-links") %>%
+         html_elements(".case-title-truncate") %>% 
+         html_text2() %>% 
+         unique()
+       
+       slide_names = paste0(name, "/", slide_names)
+       
+       list(urls = slide_urls, names = slide_names)
+     }
+  )
+  
+}
+
+download_webpathology_3 = function(ls, timeout = 1200) {
+  lgl = map_lgl(ls, ~ length(.x[[1]]) != 0)
+  ls = ls[lgl]
+  df = map(ls, ~ data.frame(urls = .x[[1]], names = .x[[2]]))
+  df = purrr::reduce(df, rbind)
+
+  
+  base_url = "https://www.webpathology.com/"
+  
+  map2(df$urls,
+       df$names,
+      function(url, name) {
+         html = paste0(base_url, url) %>% 
+           httr::GET(., timeout(timeout)) %>% 
+           read_html()
+         
+         picture_urls = html %>%
+           html_elements(".module_group") %>%
+           html_elements(".module_case") %>% 
+           html_elements("a") %>% 
+           html_attr("href") %>% 
+           unique()
+         
+         picture_names = as.character(seq(length(picture_urls)))
+         picture_names = paste0(name, "/", picture_names)
+         
+         list(urls = picture_urls, names = picture_names)
+       }
+      )
+}
+
+download_webpathology_4 = function(ls, timeout = 1200) {
+  
+  base_url = "https://www.webpathology.com/" 
+  lgl = map_lgl(ls, ~ length(.x[[1]]) != 0)
+  ls = ls[lgl]
+  df = map(ls, ~ data.frame(urls = .x[[1]], names = .x[[2]]))
+  df = purrr::reduce(df, rbind)
+  
+  map2(df$urls,
+       df$names,
+       function(url, name) {
+         
+         html = paste0(base_url, url) %>% 
+           httr::GET(., timeout(timeout)) %>% 
+           read_html()
+         
+         p_site =  html %>% 
+           html_elements("#image-main") %>%
+           html_elements("img") %>%
+           html_attr("src")
+         
+         p_site = p_site[str_detect(p_site, ".*\\.(jpg|png|tiff)")]
+         p_name = p_site %>% str_split("/") %>% pluck(1)
+         p_name = p_name[length(p_name)] 
+         
+         text = html %>%
+           html_elements("#image") %>% 
+           html_elements("p") %>% 
+           html_text2() %>% 
+           str_remove("Comments:\n|\r")
+         
+         dir.create(name, recursive = T)
+         
+         write_lines(text, file = paste0(name, "/", str_remove(p_name, "\\.(jpg|png|tiff)"), ".txt"))
+         
+         
+         p_url = paste0(base_url, p_site)
+         download.file(p_url, destfile = paste0(name, "/", p_name), timeout = timeout)
+         
+         
+       }
+       )
+}
+ 
+
+
+test1 = download_webpathology_1("Neuropath") # 只需要改NeuroPath
+test2 = download_webpathology_2(test1$urls, test1$names)
+test3 = download_webpathology_3(test2)
+test4 = download_webpathology_4(test3) # 真正下载的步骤
+
+
