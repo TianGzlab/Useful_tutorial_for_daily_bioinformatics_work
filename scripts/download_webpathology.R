@@ -4,12 +4,14 @@ library(httr)
 
 options(timeout = 1200)
 
-download_webpathology_1 = function(section, timeout = 12000) {
+download_webpathology_1 = function(section, time_out = 1200) {
+  
+  print("start download_webpathology_1")
   base_url = "https://www.webpathology.com/"
   html = base_url %>% 
-    httr::GET(., timeout(timeout)) %>%
+    httr::GET(., timeout(time_out)) %>%
     read_html()
-  
+
   section_urls = html %>% 
     html_elements("#category-group") %>% 
     html_elements("a") %>% 
@@ -43,7 +45,7 @@ download_webpathology_1 = function(section, timeout = 12000) {
   
 
  section_html = target_url %>% 
-   httr::GET(., timeout(timeout)) %>%
+   httr::GET(., timeout(time_out)) %>%
    read_html()
  
  section_sub_urls = section_html %>%
@@ -59,16 +61,20 @@ download_webpathology_1 = function(section, timeout = 12000) {
  section_sub_names = paste0(section, "/", section_sub_names)
  
  return(list(urls = section_sub_urls, names = section_sub_names))
+
 }
 
-download_webpathology_2 = function(urls, names, timeout = 12000) {
+download_webpathology_2 = function(urls, names, time_out = 1200) {
+  
+  print("start download_webpathology_2")
+  
   base_url = "https://www.webpathology.com/"
   
   map2(urls,
        names,
        function(url1, name) {
         sub_html = paste0(base_url, url1) %>% 
-          httr::GET(., timeout(timeout)) %>%
+          httr::GET(., timeout(time_out)) %>%
           read_html()
 
         slide_urls = sub_html %>% 
@@ -103,12 +109,12 @@ download_webpathology_2 = function(urls, names, timeout = 12000) {
   
 }
 
-download_webpathology_3 = function(ls, timeout = 12000) {
+download_webpathology_3 = function(ls, time_out = 1200) {
+  print("start download_webpathology_3")
   lgl = map_lgl(ls, ~ length(.x[[1]]) != 0)
   ls = ls[lgl]
   df = map(ls, ~ data.frame(urls = .x[[1]], names = .x[[2]]))
   df = purrr::reduce(df, rbind)
-
   
   base_url = "https://www.webpathology.com/"
   
@@ -116,7 +122,7 @@ download_webpathology_3 = function(ls, timeout = 12000) {
        df$names,
       function(url, name) {
          html = paste0(base_url, url) %>% 
-           httr::GET(., timeout(timeout)) %>% 
+           httr::GET(., timeout(time_out)) %>% 
            read_html()
          
          picture_urls = html %>%
@@ -132,9 +138,13 @@ download_webpathology_3 = function(ls, timeout = 12000) {
          list(urls = picture_urls, names = picture_names)
        }
       )
+  
 }
 
-download_webpathology_4 = function(ls, timeout = 1200) {
+download_webpathology_4 = function(ls, time_out = 1200) {
+  
+  print("start download_webpathology_4")
+  
   
   base_url = "https://www.webpathology.com/" 
   lgl = map_lgl(ls, ~ length(.x[[1]]) != 0)
@@ -147,7 +157,7 @@ download_webpathology_4 = function(ls, timeout = 1200) {
        function(url, name) {
          
          html = paste0(base_url, url) %>% 
-           httr::GET(., timeout(timeout)) %>% 
+           httr::GET(., timeout(time_out)) %>% 
            read_html()
          
          p_site =  html %>% 
@@ -195,6 +205,4 @@ map(sections,
       test4 = download_webpathology_4(test3) # 真正下载的步骤
     }
     )
-
-
 
