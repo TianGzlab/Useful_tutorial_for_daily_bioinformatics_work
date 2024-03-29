@@ -4,9 +4,11 @@ library(httr)
 
 options(timeout = 1200)
 
-download_webpathology_1 = function(section) {
+download_webpathology_1 = function(section, timeout = 12000) {
   base_url = "https://www.webpathology.com/"
-  html = read_html(base_url)
+  html = base_url %>% 
+    httr::GET(., timeout(timeout)) %>%
+    read_html()
   
   section_urls = html %>% 
     html_elements("#category-group") %>% 
@@ -40,7 +42,9 @@ download_webpathology_1 = function(section) {
          )
   
 
- section_html = read_html(target_url)
+ section_html = target_url %>% 
+   httr::GET(., timeout(timeout)) %>%
+   read_html()
  
  section_sub_urls = section_html %>%
    html_elements(".list-titles") %>% 
@@ -57,13 +61,15 @@ download_webpathology_1 = function(section) {
  return(list(urls = section_sub_urls, names = section_sub_names))
 }
 
-download_webpathology_2 = function(urls,names) {
+download_webpathology_2 = function(urls, names, timeout = 12000) {
   base_url = "https://www.webpathology.com/"
   
   map2(urls,
        names,
        function(url1, name) {
-        sub_html = read_html(paste0(base_url, url1))
+        sub_html = paste0(base_url, url1) %>% 
+          httr::GET(., timeout(timeout)) %>%
+          read_html()
 
         slide_urls = sub_html %>% 
          html_elements(".list-group") %>%
@@ -97,7 +103,7 @@ download_webpathology_2 = function(urls,names) {
   
 }
 
-download_webpathology_3 = function(ls, timeout = 1200) {
+download_webpathology_3 = function(ls, timeout = 12000) {
   lgl = map_lgl(ls, ~ length(.x[[1]]) != 0)
   ls = ls[lgl]
   df = map(ls, ~ data.frame(urls = .x[[1]], names = .x[[2]]))
