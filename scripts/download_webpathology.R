@@ -52,6 +52,8 @@ download_webpathology_1 = function(section) {
    html_elements("a") %>%
    html_text()
  
+ section_sub_names = paste0(section, "/", section_sub_names)
+ 
  return(list(urls = section_sub_urls, names = section_sub_names))
 }
 
@@ -171,10 +173,22 @@ download_webpathology_4 = function(ls, timeout = 1200) {
 }
  
 
+sections = c("Neuropath", "Breast", "Head_Neck", "Mediastinum",
+             "Peritoneum", "Genitourinary", "Cancer_Genomics",
+             "HemPath", "Gynecologic", "Orthopedic",
+             "DermPath", "Endocrine", "GI_Path", 
+             "Soft_Tissue", "Pulmonary", "Cardiac",
+             "Infectious_Disease", "Pediatric",
+             "CytoPath", "Genetic_Disorders")
 
-test1 = download_webpathology_1("Neuropath") # 只需要改NeuroPath
-test2 = download_webpathology_2(test1$urls, test1$names)
-test3 = download_webpathology_3(test2)
-test4 = download_webpathology_4(test3) # 真正下载的步骤
+map(sections,
+    function(section) {
+      test1 = download_webpathology_1(section) # 只需要改NeuroPath
+      test2 = download_webpathology_2(test1$urls, test1$names)
+      test3 = download_webpathology_3(test2)
+      test4 = download_webpathology_4(test3) # 真正下载的步骤
+    }
+    )
+
 
 
