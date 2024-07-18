@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/570f52e6-d8b7-4dbd-89b7-8db563ab6984)![image](https://github.com/user-attachments/assets/e789302d-a2fc-4607-85ef-c797db81c665)# Useful tutorial for daily bioinformatics work
+# Useful tutorial for daily bioinformatics work
 
 This repository lists extremely handful online tutorial needed for daily bioinformatics work. The content separates in five major sections including **Linux**, **R**, **Python** , **Framework** and **Theory**.
 
