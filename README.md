@@ -1,4 +1,4 @@
-# Useful tutorial for daily bioinformatics work
+![image](https://github.com/user-attachments/assets/570f52e6-d8b7-4dbd-89b7-8db563ab6984)![image](https://github.com/user-attachments/assets/e789302d-a2fc-4607-85ef-c797db81c665)# Useful tutorial for daily bioinformatics work
 
 This repository lists extremely handful online tutorial needed for daily bioinformatics work. The content separates in five major sections including **Linux**, **R**, **Python** , **Framework** and **Theory**.
 
@@ -24,8 +24,14 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 ## Framework
 [**WDL**](https://github.com/openwdl/wdl): The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and writeable syntax. Its user guide can be found [here](https://support.terra.bio/hc/en-us/articles/360037117492-Overview-Getting-started-with-WDL). WDL relies on excuting engine called `cromwell`, whose java ball can be downloaded [here](https://github.com/broadinstitute/cromwell/releases/tag/86) 
 
+[**Build GTP step by step**](https://github.com/karpathy/nanoGPT): A tutorial teaching how to make GPT architecture come true.
+
 ## Theory
 [**Harvard Stat 115**](https://www.bilibili.com/video/BV1yS4y1Z721/): gives the beginners an overview of the proceedings in bioinformatics and computational biology and explains classic algorithm well.
+
+[**Linear algebra**](https://web.mit.edu/18.06/www/): basic linear algebra knowledge required for understanding deep learning models.
+
+[**Probability**](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/): The essence of deep learning is probability which you should learn as much as you can.
 
 
 ## Other resource
