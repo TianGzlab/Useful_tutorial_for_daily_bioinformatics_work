@@ -21,6 +21,8 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Pytorch-based deep learning**](https://www.bilibili.com/video/BV1Y7411d7Ys/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=cd3f09bebcacfecf396259a271817a0c): A step-by-step tutorial for beginners to make deep-learning happen using Pytorch tool box.
 
+[**How to use transformers**](https://www.bilibili.com/video/BV1ma4y1g791/?spm_id_from=333.999.0.0&vd_source=cd3f09bebcacfecf396259a271817a0c): A step-by-step tutorial for using transformers package.
+
 ## Framework
 [**WDL**](https://github.com/openwdl/wdl): The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and writeable syntax. Its user guide can be found [here](https://support.terra.bio/hc/en-us/articles/360037117492-Overview-Getting-started-with-WDL). WDL relies on excuting engine called `cromwell`, whose java ball can be downloaded [here](https://github.com/broadinstitute/cromwell/releases/tag/86) 
 
