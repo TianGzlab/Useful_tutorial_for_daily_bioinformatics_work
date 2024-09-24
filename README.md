@@ -35,7 +35,7 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Probability**](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/): The essence of deep learning is probability which you should learn as much as you can.
 
-[**Statsitics**](https://web.mit.edu/18.06/www/): introduction to Mathematical Statistics.
+[**Statsitics**](https://online.stat.psu.edu/stat415/): introduction to Mathematical Statistics.
 
 
 ## Other resource
