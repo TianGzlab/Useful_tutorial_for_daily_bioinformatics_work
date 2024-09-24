@@ -35,6 +35,8 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Probability**](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/): The essence of deep learning is probability which you should learn as much as you can.
 
+[**Statsitics**](https://web.mit.edu/18.06/www/): introduction to Mathematical Statistics.
+
 
 ## Other resource
 [**Great suggestion for data visualization**](https://github.com/cxli233/FriendsDontLetFriends/tree/main#13-friends-dont-let-friends-forget-to-reorder-stacked-bar-plot ): tips not to make bad choice when visualization. 
@@ -46,5 +48,5 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Single-cell best practices**](https://www.sc-best-practices.org/preamble.html): A useful book that is updated frequently for the best practice in single cell RNAseq.
 
-[**Raincloud plot**](https://medium.com/@amorimfranchi/raincloud-plots-for-clear-precise-and-efficient-data-communication-4c71d0a37c23):A hybrid plot mixing a halved violin plot, a box plot, and scattered raw data, can help us visualize raw data, the distribution of the data, and key summary statistics at the same time.
+[**Raincloud plot**](https://medium.com/@amorimfranchi/raincloud-plots-for-clear-precise-and-efficient-data-communication-4c71d0a37c23): A hybrid plot mixing a halved violin plot, a box plot, and scattered raw data, can help us visualize raw data, the distribution of the data, and key summary statistics at the same time.
 
