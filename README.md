@@ -45,3 +45,6 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 [**Bulk RNAseq tutorial**](https://uofabioinformaticshub.github.io/Spring_Into_Bioinformatics/): Great Bulk RNA-seq data analysis workshop.
 
 [**Single-cell best practices**](https://www.sc-best-practices.org/preamble.html): A useful book that is updated frequently for the best practice in single cell RNAseq.
+
+[**Raincloud plot**](https://medium.com/@amorimfranchi/raincloud-plots-for-clear-precise-and-efficient-data-communication-4c71d0a37c23):A hybrid plot mixing a halved violin plot, a box plot, and scattered raw data, can help us visualize raw data, the distribution of the data, and key summary statistics at the same time.
+
