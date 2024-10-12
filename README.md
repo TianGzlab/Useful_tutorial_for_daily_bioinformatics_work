@@ -52,3 +52,6 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Mediation analysis**](https://library.virginia.edu/data/articles/introduction-to-mediation-analysis): A tutorial for mediation analysis using R software.
 
+[**Treemap plot**](https://towardsdatascience.com/make-a-treemap-in-python-426cee6ee9b8):How to make Treemap plot in python using plotly.
+
+
