@@ -19,7 +19,7 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Machine learning based on sklearn**](https://www.bilibili.com/video/BV1P7411P78r/?vd_source=cd3f09bebcacfecf396259a271817a0c)：how to use Python sklearn package to make machine learning happen. Its PDF documents settle in **Machine_learning** folder.
 
-[**Pytorch-based deep learning**](https://www.bilibili.com/video/BV1Y7411d7Ys/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=cd3f09bebcacfecf396259a271817a0c): A step-by-step tutorial for beginners to make deep-learning happen using Pytorch tool box.
+[**Pytorch-based deep learning**](https://www.sthda.com/english/wiki/beautiful-dendrogram-visualizations-in-r-5-must-known-methods-unsupervised-machine-learning#installation-and-loading): A step-by-step tutorial for beginners to make deep-learning happen using Pytorch tool box.
 
 [**Transformers**](https://www.bilibili.com/video/BV1ma4y1g791/?spm_id_from=333.999.0.0&vd_source=cd3f09bebcacfecf396259a271817a0c): A step-by-step tutorial for using transformers package.
 
