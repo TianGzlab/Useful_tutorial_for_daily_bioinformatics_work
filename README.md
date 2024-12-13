@@ -54,4 +54,5 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Treemap plot**](https://plotly.com/python/treemaps/):How to make Treemap plot in python using plotly.
 
+[**Dendrogram**](https://www.sthda.com/english/wiki/beautiful-dendrogram-visualizations-in-r-5-must-known-methods-unsupervised-machine-learning#installation-and-loading):How to optimize basic dendrogram in R.
 
