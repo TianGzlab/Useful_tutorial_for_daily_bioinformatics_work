@@ -23,6 +23,8 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Transformers**](https://www.bilibili.com/video/BV1ma4y1g791/?spm_id_from=333.999.0.0&vd_source=cd3f09bebcacfecf396259a271817a0c): A step-by-step tutorial for using transformers package.
 
+[**Practice AI**](https://github.com/MLEveryday/practicalAI-cn): Best practice to learn AI from the perspective of product manager. 
+
 ## Framework
 [**WDL**](https://github.com/openwdl/wdl): The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and writeable syntax. Its user guide can be found [here](https://support.terra.bio/hc/en-us/articles/360037117492-Overview-Getting-started-with-WDL). WDL relies on excuting engine called `cromwell`, whose java ball can be downloaded [here](https://github.com/broadinstitute/cromwell/releases/tag/86) 
 
@@ -55,4 +57,6 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 [**Treemap plot**](https://plotly.com/python/treemaps/):How to make Treemap plot in python using plotly.
 
 [**Dendrogram**](https://www.sthda.com/english/wiki/beautiful-dendrogram-visualizations-in-r-5-must-known-methods-unsupervised-machine-learning#installation-and-loading):How to optimize basic dendrogram in R.
+
+[**Gradient color palette**](https://www.flerlagetwins.com/2021/06/datafam-colors-color-palette.html):Nice gradient color palette.
 
