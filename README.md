@@ -25,6 +25,9 @@ This repository lists extremely handful online tutorial needed for daily bioinfo
 
 [**Practice AI**](https://github.com/MLEveryday/practicalAI-cn): Best practice to learn AI from the perspective of product manager. 
 
+## AI-coding
+[**set up claude code**](https://www.yuque.com/beihu-iq2oo/zlyf06/ehh872tzdeglic37?singleDoc#): set up claude code in Linux
+
 ## Framework
 [**WDL**](https://github.com/openwdl/wdl): The Workflow Description Language (WDL) is a way to specify data processing workflows with a human-readable and writeable syntax. Its user guide can be found [here](https://support.terra.bio/hc/en-us/articles/360037117492-Overview-Getting-started-with-WDL). WDL relies on excuting engine called `cromwell`, whose java ball can be downloaded [here](https://github.com/broadinstitute/cromwell/releases/tag/86) 
 
